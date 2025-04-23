@@ -1,0 +1,3 @@
+This repository houses code and figures for a blog post (coming soon) on my website about spectral densities of power-law data and natural data. I use the Silverstein equation to numerically solve for the spectral density of structured Wishart matrices with power-law eigenvalues. 
+This agrees nicely with empirics and I then compare to natural datasets such as CIFAR-10 and MNIST. We see, extending observations made previously in the literature, that for CIFAR-10 the spectral density deviates substantially from a power law, but after ReLU mapping it is quite close
+with deviations at small eigenvalues.  For MNIST the difference is more dramatic, with the density seeming also near equiparameterization with a significant tail.
