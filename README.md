@@ -13,7 +13,7 @@ with deviations at small eigenvalues.
 ![image](https://github.com/user-attachments/assets/2e7859ad-8eba-4c68-90ec-16cddc57f852)
 
 
-We also look at wikitext, where choices about vocab_size given by custom BPE and about embedding dimension, must be made. The spectral density in some cases is 
+We also look at wikitext with ReLU mapping, where choices about vocab_size given by custom BPE and about embedding dimension, must be made. The spectral density in some cases is 
 surprisingly well described by a power-law spectral density near equiparameterization.
 
 ![image](https://github.com/user-attachments/assets/d33fa118-c017-4fb0-97cb-381a2419456e)
