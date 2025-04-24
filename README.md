@@ -11,6 +11,7 @@ We see, extending observations made previously in the literature, that for CIFAR
 with deviations at small eigenvalues.  We also look at wikitext, where choices about vocab_size given by custom BPE and about embedding dimension, must be made. The spectral density in some cases is 
 surprisingly well described by a power-law spectral density near equiparameterization.
 
+![image](https://github.com/user-attachments/assets/d33fa118-c017-4fb0-97cb-381a2419456e)
 
 
 Planned blog post and figures: [aaronjhf.github.io](https://aaronjhf.github.io)
