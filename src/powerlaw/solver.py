@@ -1,13 +1,40 @@
-import sys
-import contextlib
 import numpy as np
 from scipy.integrate import quad
 from scipy.optimize import root
+import contextlib
 
 
 
 
-def silverstein_density(evals: np.ndarray, alpha: float, q: float, Lc: float, eps = 1e-9)-> np.ndarray:
+def silverstein_density(
+      evals: np.ndarray, 
+      alpha: float, 
+      q: float, 
+      Lc: float, 
+      eps: float = 1e-9
+      )-> np.ndarray:
+    """
+    Compute the limiting spectral density ρ(z) for a power‐law prior H(t) ∝ t^{-1/α − 1}
+    on [Lc, 1], via the Silverstein equation.
+
+    Parameters
+    ----------
+    evals
+        1D array of real evaluation points z_i where ρ(z_i) is desired. Should be fed in ordered largest to smallest for best control.
+    alpha
+        Power‐law exponent parameter α > 0.
+    q
+        Aspect‐ratio parameter (p/n).
+    Lc
+        Lower cutoff of the power‐law support, 0 < Lc < 1.
+    eps
+        Small imaginary part added to z to regularize the root‐finder.
+
+    Returns
+    -------
+    rho
+        1D array of the same length as `evals`, containing ρ(z_i).
+    """
 
     c = 1/alpha*1/(1-np.power(Lc, 1/alpha))
 
@@ -44,7 +71,7 @@ def silverstein_density(evals: np.ndarray, alpha: float, q: float, Lc: float, ep
     for z in evals[1:]:
         rho, mf0 = get_rho(q, z+1j*eps, mf0)
         spec_array.append(rho)
-    return spec_array
+    return np.array(spec_array, dtype=float)
 
 
 def end_pts(spec_dict):
