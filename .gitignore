@@ -1,0 +1,7 @@
+# Data caches (never commit raw data, too big)
+/data/
+/outputs/
+/.cache/
+/hf_datasets/
+*.pt
+*.npz
