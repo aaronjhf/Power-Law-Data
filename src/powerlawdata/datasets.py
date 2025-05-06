@@ -34,7 +34,9 @@ def load_cifar10(cfg: dict = None, flatten: bool = True) -> np.ndarray:
         root=root,
         train=(cfg.get("split", "train") == "train"),
         download=True,
-        transform=transforms.ToTensor()
+        transform=transforms.Compose(
+    [transforms.ToTensor(),
+     transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
     )
     # stack into numpy
     X = np.stack([np.array(img).reshape(3*32*32) for img, _ in ds], axis=0)
