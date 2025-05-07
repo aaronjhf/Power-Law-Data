@@ -64,13 +64,12 @@ def load_wikitext(cfg: dict = None, split: str = "train") -> list[str]:
     # Optionally override the HF cache via env var in your shell:
     #   export HF_DATASETS_CACHE=~/.cache/hf_datasets
     ds = load_dataset(
-        "wikitext",
-        "wikitext-103-v1",
+        "wikitext", "wikitext-2-raw-v1",
         split=split,
         cache_dir=str(_get_data_dir(cfg) / "hf_datasets")
     )
     # return list of strings
-    return ds["text"]
+    return ds
 
 # Dispatch helper if you want a single factory
 def get_dataset(name: str, cfg: dict):
