@@ -40,7 +40,7 @@ def load_cifar10(cfg: dict = None, flatten: bool = True) -> np.ndarray:
     )
     # stack into numpy
     X = np.stack([np.array(img).reshape(3*32*32) for img, _ in ds], axis=0)
-    return X.astype(np.float32)
+    return X.astype(np.float64)
 
 def load_mnist(cfg: dict = None, flatten: bool = True) -> np.ndarray:
     """
@@ -54,7 +54,7 @@ def load_mnist(cfg: dict = None, flatten: bool = True) -> np.ndarray:
         transform=transforms.ToTensor()
     )
     X = np.stack([np.array(img).reshape(28*28) for img, _ in ds], axis=0)
-    return X.astype(np.float32)
+    return X.astype(np.float64)
 
 def load_wikitext(cfg: dict = None, split: str = "train") -> list[str]:
     """
