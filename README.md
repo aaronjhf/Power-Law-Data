@@ -17,5 +17,5 @@ I also look at Wikitext with ReLU mapping, where choices about vocab_size given 
 ![image](https://github.com/user-attachments/assets/d33fa118-c017-4fb0-97cb-381a2419456e)
 
 
-Planned blog post and figures: [aaronjhf.github.io](https://aaronjhf.github.io/blog/power-law-spec/)
+Blog post: [aaronjhf.github.io](https://aaronjhf.github.io/blog/power-law-spec/)
 
