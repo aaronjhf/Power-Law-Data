@@ -1,6 +1,6 @@
 # Spectral Densities of Power-Law and Natural Data
 
-This repository houses code and figures for a blog post (coming soon) on my website about spectral densities of power-law data and natural data. 
+This repository houses code and figures for a blog post ([aaronjhf.github.io](https://aaronjhf.github.io/blog/power-law-spec/)) on my website about spectral densities of power-law data and natural data. 
 Specifically:
 
 - I use the Silverstein equation to numerically solve for the spectral density of structured Wishart matrices with power-law eigenvalues. 
@@ -19,4 +19,3 @@ I also look at Wikitext with ReLU mapping, where choices about vocab_size given 
 ![image](https://github.com/user-attachments/assets/d33fa118-c017-4fb0-97cb-381a2419456e)
 ![image](https://github.com/user-attachments/assets/f92bdde2-6e6e-4c0e-a905-894798a987a7)
 
-Blog post: [aaronjhf.github.io](https://aaronjhf.github.io/blog/power-law-spec/)
